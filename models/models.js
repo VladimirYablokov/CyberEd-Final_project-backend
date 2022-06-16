@@ -2,7 +2,7 @@ const sequelize = require('../db')
 const {DataTypes} = require('sequelize');
 const {INTEGER, STRING} = DataTypes;
 
-const Book = sequelize.define('Book', {
+const AuthorBook = sequelize.define('AuthorBook', {
     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: STRING, allowNull: false},
     price: {type: STRING, allowNull: false},
@@ -11,20 +11,20 @@ const Book = sequelize.define('Book', {
     picture: {type: STRING, allowNull: false},
 })
 
-// const Partner = sequelize.define('Partner', {
+// const OurPartners = sequelize.define('OurPartners', {
 //     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
 //     logo: {type: STRING, allowNull: false},
 //     name: {type: STRING, allowNull: false},
 //     comment: {type: STRING, allowNull: false},
 // })
 
-// const Skill = sequelize.define('Skill', {
+// const Skills = sequelize.define('Skills', {
 //     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
 //     numberSkill: {type: STRING, allowNull: false},
 //     text: {type: STRING, allowNull: false},
 // })
 
-// const Article = sequelize.define('Article', {
+// const Articles = sequelize.define('Articles', {
 //     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
 //     name: {type: STRING, allowNull: false},
 //     comment: {type: STRING, allowNull: false},
