@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/ruoter', router)
+app.use('/api/router', router)
 
 const start = async () =>{
     try{
@@ -19,7 +19,7 @@ const start = async () =>{
         app.listen(PORT, ()=>{
             console.log('server started!')
         })
-    }catch(ERROR){
+    }catch(error){
             console.log(error)
         }
 }

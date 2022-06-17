@@ -2,24 +2,24 @@ const {AuthorBook, OurPartner, Skill, Article} = require('../models/models');
 
 class Controllers {
     
-    async findBooks(req, res){
+    async Books(req, res){
         const books = await AuthorBook.findAll();
         return res.send(books)
     }
 
-    async findPartners(req, res){
-        const books = await OurPartner.findAll();
-        return res.send(books)
+    async Partners(req, res){
+        const partners = await OurPartner.findAll();
+        return res.send(partners)
     }
 
-    async findSkills(req, res){
-        const books = await Skill.findAll();
-        return res.send(books)
+    async Skills(req, res){
+        const skills = await Skill.findAll();
+        return res.send(skills)
     }
 
-    async findArticles(req, res){
-        const books = await Article.findAll();
-        return res.send(books) 
+    async Articles(req, res){
+        const articles = await Article.findAll();
+        return res.send(articles) 
     }
 }
 

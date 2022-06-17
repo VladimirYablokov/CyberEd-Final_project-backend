@@ -1,10 +1,10 @@
 const router = new require('express')();
 
-const {findBooks, findPartners, findSkills, findArticles} = require("../controllers/controller");
+const {Books, Partners, Skills, Articles} = require("../controllers/controller");
 
-router.get('/books', findBooks);
-router.get('/partners', findPartners);
-router.get('/skills', findSkills);
-router.get('/articles', findArticles);
+router.get('/books', Books);
+router.get('/partners', Partners);
+router.get('/skills', Skills);
+router.get('/articles', Articles);
 
 module.exports = router
