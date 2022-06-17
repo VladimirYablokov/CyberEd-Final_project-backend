@@ -7,24 +7,24 @@ const AuthorBook = sequelize.define('AuthorBook', {
     name: {type: STRING, allowNull: false},
     price: {type: STRING, allowNull: false},
     comment: {type: STRING, allowNull: false},
-    typeBook: {type: STRING, allowNull: false},
+    type: {type: STRING, allowNull: false},
     picture: {type: STRING, allowNull: false},
 })
 
-const OurPartners = sequelize.define('OurPartners', {
+const OurPartner = sequelize.define('OurPartners', {
     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
     logo: {type: STRING, allowNull: false},
     name: {type: STRING, allowNull: false},
     comment: {type: STRING, allowNull: false},
 })
 
-const Skills = sequelize.define('Skills', {
+const Skill = sequelize.define('Skills', {
     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
-    numberSkill: {type: STRING, allowNull: false},
+    number: {type: STRING, allowNull: false},
     text: {type: STRING, allowNull: false},
 })
 
-const Articles = sequelize.define('Articles', {
+const Article = sequelize.define('Articles', {
     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: STRING, allowNull: false},
     comment: {type: STRING, allowNull: false},
@@ -32,4 +32,4 @@ const Articles = sequelize.define('Articles', {
     picture: {type: STRING, allowNull: false},
 })
 
-module.exports = {AuthorBook, OurPartners, Skills, Articles}
+module.exports = {AuthorBook, OurPartner, Skill, Article}

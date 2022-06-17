@@ -1,10 +1,9 @@
 const express = require('express');
 require('dotenv').config();
+require('./models/models')
 
 const sequelize = require('./db');
-
 const PORT = process.env.PORT
-
 const app = express();
 
 app.get('/', (req, res)=>{
@@ -21,6 +20,5 @@ const start = async () =>{
     }catch(ERROR){
             console.log(error)
         }
-
 }
 start();
