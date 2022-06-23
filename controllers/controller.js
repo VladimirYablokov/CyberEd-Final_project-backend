@@ -1,7 +1,6 @@
 const {AuthorBook, OurPartner, Skill, Article} = require('../models/models');
 
 class Controllers {
-    
     async Books(req, res){
         const books = await AuthorBook.findAll();
         return res.send(books)
